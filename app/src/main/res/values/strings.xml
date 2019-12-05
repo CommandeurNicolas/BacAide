@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Bac+aide</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_pseudo"></string>
+    <string name="nav_header_mail"></string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_finance">Finance</string>
+    <string name="menu_sante">Sante</string>
+    <string name="menu_logement">Logement</string>
+    <string name="menu_jobs">Jobs</string>
+    <string name="menu_food">Food</string>
+    <string name="menu_events">Events</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_forum">Forum</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_nav_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_finance"
+            android:icon="@drawable/ic_nav_finance"
+            android:title="@string/menu_finance" />
+        <item
+            android:id="@+id/nav_sante"
+            android:icon="@drawable/ic_nav_sante"
+            android:title="@string/menu_sante" />
+        <item
+            android:id="@+id/nav_logement"
+            android:icon="@drawable/ic_nav_logement"
+            android:title="@string/menu_logement" />
+        <item
+            android:id="@+id/nav_jobs"
+            android:icon="@drawable/ic_nav_jobs"
+            android:title="@string/menu_jobs" />
+
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/ic_nav_food"
+            android:title="@string/menu_food" />
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_nav_events"
+            android:title="@string/menu_events" />
+    </group>
+
+    <item android:title="Communication">
+        <menu>
+            <item
+                android:id="@+id/nav_faq"
+                android:icon="@drawable/ic_nav_faq"
+                android:title="@string/menu_faq" />
+            <item
+                android:id="@+id/nav_forum"
+                android:icon="@drawable/ic_nav_forum"
+                android:title="@string/menu_forum" />
+        </menu>
+    </item>
+
+</menu>

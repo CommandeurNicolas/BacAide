@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bacaide.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_finance"
+        android:name="com.example.bacaide.ui.finance.FinanceFragment"
+        android:label="@string/menu_finance"
+        tools:layout="@layout/fragment_finance" />
+
+    <fragment
+        android:id="@+id/nav_sante"
+        android:name="com.example.bacaide.ui.sante.SanteFragment"
+        android:label="@string/menu_sante"
+        tools:layout="@layout/fragment_sante" />
+
+    <fragment
+        android:id="@+id/nav_logement"
+        android:name="com.example.bacaide.ui.logement.LogementFragment"
+        android:label="@string/menu_logement"
+        tools:layout="@layout/fragment_logement" />
+
+    <fragment
+        android:id="@+id/nav_jobs"
+        android:name="com.example.bacaide.ui.jobs.JobsFragment"
+        android:label="@string/menu_jobs"
+        tools:layout="@layout/fragment_jobs" />
+
+    <fragment
+        android:id="@+id/nav_food"
+        android:name="com.example.bacaide.ui.food.FoodFragment"
+        android:label="@string/menu_food"
+        tools:layout="@layout/fragment_food" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.example.bacaide.ui.events.EventsFragment"
+        android:label="@string/menu_events"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.example.bacaide.ui.faq.FaqFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/nav_forum"
+        android:name="com.example.bacaide.ui.forum.ForumFragment"
+        android:label="@string/menu_forum"
+        tools:layout="@layout/fragment_forum" />
+</navigation>
