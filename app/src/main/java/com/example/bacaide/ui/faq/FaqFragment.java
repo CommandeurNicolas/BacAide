@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,6 +37,13 @@ public class FaqFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_faq, container, false);
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.nav_host_fragment, this, "Faq");
+        transaction.addToBackStack(null);
+        transaction.commit();
+
         alimentationRV = root.findViewById(R.id.alimentation);
         financeRV = root.findViewById(R.id.finance);
         santeRV = root.findViewById(R.id.sante);

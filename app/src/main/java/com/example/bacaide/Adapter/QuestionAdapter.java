@@ -1,6 +1,7 @@
 package com.example.bacaide.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bacaide.Activites.reponseQuestionActivity;
 import com.example.bacaide.R;
+import com.example.bacaide.ui.faq.FaqFragment;
 
 import java.util.ArrayList;
 
@@ -40,6 +43,12 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position){
         holder.question.setText(this.question.get(position));
+       /* holder.question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(reponseQuestionActivity.class);
+            }
+        });*/
     }
 
     @Override
