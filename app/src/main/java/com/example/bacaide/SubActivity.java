@@ -1,4 +1,4 @@
-package com.example.bacaide.Activites;
+package com.example.bacaide;
 
 import androidx.appcompat.app.AppCompatActivity;
 

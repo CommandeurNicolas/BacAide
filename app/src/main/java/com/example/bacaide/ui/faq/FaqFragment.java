@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.bacaide.Adapter.QuestionAdapter;
 import com.example.bacaide.Adapter.ResponseAdapter;
 import com.example.bacaide.R;
+import com.example.bacaide.ui.home.HomeFragment;
 
 public class FaqFragment extends Fragment {
 
@@ -32,6 +34,7 @@ public class FaqFragment extends Fragment {
     private RecyclerView jobsRV;
     private RecyclerView alimentationRV;
     private RecyclerView eventsRV;
+    private ImageButton backButton;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +46,19 @@ public class FaqFragment extends Fragment {
         transaction.replace(R.id.nav_host_fragment, this, "Faq");
         transaction.addToBackStack(null);
         transaction.commit();
+        backButton = (ImageButton) root.findViewById(R.id.button_return);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.add(R.id.nav_host_fragment, new HomeFragment(), "Home");
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
 
         alimentationRV = root.findViewById(R.id.alimentation);
         financeRV = root.findViewById(R.id.finance);

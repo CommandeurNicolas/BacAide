@@ -10,76 +10,94 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finance"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/finance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Santé"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logement"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/logement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jobs"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/jobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alimentation"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/alimentation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Events"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/button_return"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finance"
-            android:textAlignment="center" />
+            android:src="@drawable/ic_back" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/finance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Santé"
-            android:textAlignment="center" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/sante"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Logement"
-            android:textAlignment="center" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/logement"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Jobs"
-            android:textAlignment="center" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/jobs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Alimentation"
-            android:textAlignment="center" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/alimentation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Events"
-            android:textAlignment="center" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/events"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>

@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.bacaide.R;
-import com.example.bacaide.info.InfoFragment;
+import com.example.bacaide.ui.info.InfoFragment;
 import com.example.bacaide.ui.faq.FaqFragment;
 import com.example.bacaide.ui.forum.ForumFragment;
 
