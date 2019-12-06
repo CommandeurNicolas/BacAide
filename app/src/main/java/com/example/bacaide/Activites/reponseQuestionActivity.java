@@ -2,14 +2,17 @@ package com.example.bacaide.Activites;
 
 import android.os.Bundle;
 
+import com.example.bacaide.Adapter.ResponseAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.TextView;
 
 import com.example.bacaide.R;
@@ -20,6 +23,7 @@ public class reponseQuestionActivity extends AppCompatActivity {
     private String question ;
     private TextView questionTV;
     private RecyclerView reponseRV;
+    private ResponseAdapter adapterReponse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         question = "Pourquoi on fait une appli mobile ?";
@@ -42,7 +46,10 @@ public class reponseQuestionActivity extends AppCompatActivity {
         reponseRV = findViewById(R.id.answerRV);
         questionTV = findViewById(R.id.questionPose);
 
-        responseRV = new
+        adapterReponse = new ResponseAdapter(getApplicationContext(),"Combien de temps prend t-il de faire ses devoirs ? ");
+        reponseRV.setAdapter(adapterReponse);
+        reponseRV.setLayoutManager(new LinearLayoutManager(this));
+
 
 
     }
