@@ -1,6 +1,5 @@
 package com.example.bacaide.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +8,13 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.bacaide.R;
-import com.example.bacaide.info.InfoActivity;
+import com.example.bacaide.info.InfoFragment;
+import com.example.bacaide.ui.faq.FaqFragment;
+import com.example.bacaide.ui.forum.ForumFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -19,9 +22,15 @@ public class HomeFragment extends Fragment {
     private Button buttonFaq;
     private Button buttonForum;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull final LayoutInflater inflater,
+                             final ViewGroup container, Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.nav_host_fragment, this, "Home");
+        transaction.addToBackStack(null);
+        transaction.commit();
 
         buttonInfo = (Button) root.findViewById(R.id.button_info);
         buttonFaq = (Button) root.findViewById(R.id.button_faq);
@@ -30,22 +39,31 @@ public class HomeFragment extends Fragment {
         buttonInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), InfoActivity.class);
-                startActivity(i);
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.add(R.id.nav_host_fragment, new InfoFragment(), "Info");
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         buttonFaq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), InfoActivity.class);
-                startActivity(i);
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.add(R.id.nav_host_fragment, new FaqFragment(), "Faq");
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         buttonForum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(root.getContext(), InfoActivity.class);
-                startActivity(i);
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.add(R.id.nav_host_fragment, new ForumFragment(), "Forum");
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
